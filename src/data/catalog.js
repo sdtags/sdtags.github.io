@@ -22,36 +22,21 @@ export const CATALOG = {
             tag: "surprised",
             thumb: "thumbs/heads/surprised.webp",
           },
+
           { id: "sad", tag: "sad", thumb: "thumbs/heads/sad.webp" },
           { id: "angry", tag: "angry", thumb: "thumbs/heads/angry.webp" },
-          {
-            id: "serious",
-            tag: "serious",
-            thumb: "thumbs/heads/serious.webp",
-          },
+          { id: "serious", tag: "serious", thumb: "thumbs/heads/serious.webp" },
+
           { id: "blush", tag: "blush", thumb: "thumbs/heads/blush.webp" },
-          { id: "smirk", tag: "smirk", thumb: "thumbs/heads/smirk.webp" },
-          {
-            id: "open_mouth",
-            tag: "open mouth",
-            thumb: "thumbs/heads/open_mouth.webp",
-          },
-          {
-            id: "closed_mouth",
-            tag: "closed mouth",
-            thumb: "thumbs/heads/closed_mouth.webp",
-          },
-          { id: "teeth", tag: "teeth", thumb: "thumbs/heads/teeth.webp" },
-
-          { id: "crying", tag: "crying", thumb: "thumbs/heads/crying.webp" },
-          { id: "tears", tag: "tears", thumb: "thumbs/heads/tears.webp" },
-
           {
             id: "embarrassed",
             tag: "embarrassed",
             thumb: "thumbs/heads/embarrassed.webp",
           },
           { id: "shy", tag: "shy", thumb: "thumbs/heads/shy.webp" },
+
+          { id: "crying", tag: "crying", thumb: "thumbs/heads/crying.webp" },
+          { id: "tears", tag: "tears", thumb: "thumbs/heads/tears.webp" },
 
           { id: "sleepy", tag: "sleepy", thumb: "thumbs/heads/sleepy.webp" },
           { id: "tired", tag: "tired", thumb: "thumbs/heads/tired.webp" },
@@ -61,18 +46,10 @@ export const CATALOG = {
             tag: "confused",
             thumb: "thumbs/heads/confused.webp",
           },
-          {
-            id: "annoyed",
-            tag: "annoyed",
-            thumb: "thumbs/heads/annoyed.webp",
-          },
+          { id: "annoyed", tag: "annoyed", thumb: "thumbs/heads/annoyed.webp" },
 
           { id: "scared", tag: "scared", thumb: "thumbs/heads/scared.webp" },
-          {
-            id: "nervous",
-            tag: "nervous",
-            thumb: "thumbs/heads/nervous.webp",
-          },
+          { id: "nervous", tag: "nervous", thumb: "thumbs/heads/nervous.webp" },
 
           {
             id: "determined",
@@ -81,13 +58,7 @@ export const CATALOG = {
           },
           { id: "frown", tag: "frown", thumb: "thumbs/heads/frown.webp" },
 
-          { id: "pout", tag: "pout", thumb: "thumbs/heads/pout.webp" },
-          {
-            id: "sulking",
-            tag: "sulking",
-            thumb: "thumbs/heads/sulking.webp",
-          },
-
+          { id: "sulking", tag: "sulking", thumb: "thumbs/heads/sulking.webp" },
           {
             id: "evil_smile",
             tag: "evil smile",
@@ -98,6 +69,10 @@ export const CATALOG = {
             tag: "tsundere",
             thumb: "thumbs/heads/tsundere.webp",
           },
+          { id: "ahegao", tag: "ahegao", thumb: "thumbs/heads/ahegao.webp" },
+          { id: "smug", tag: "smug", thumb: "thumbs/heads/smug.webp" },
+          { id: "yawn", tag: "yawn", thumb: "thumbs/heads/yawn.webp" },
+          { id: "grimace", tag: "grimace", thumb: "thumbs/heads/grimace.webp" },
         ],
       },
       {
@@ -143,6 +118,36 @@ export const CATALOG = {
             id: "sparkle",
             tag: "sparkle",
             thumb: "thumbs/heads/sparkle.webp",
+          },
+          {
+            id: "looking_up",
+            tag: "looking up",
+            thumb: "thumbs/heads/looking_up.webp",
+          },
+          {
+            id: "looking_down",
+            tag: "looking down",
+            thumb: "thumbs/heads/looking_down.webp",
+          },
+          {
+            id: "looking_to_the_side",
+            tag: "looking to the side",
+            thumb: "thumbs/heads/looking_to_the_side.webp",
+          },
+          {
+            id: "looking_at_another",
+            tag: "looking at another",
+            thumb: "thumbs/heads/looking_at_another.webp",
+          },
+          {
+            id: "eye_contact",
+            tag: "eye contact",
+            thumb: "thumbs/heads/eye_contact.webp",
+          },
+          {
+            id: "narrowed_eyes",
+            tag: "narrowed eyes",
+            thumb: "thumbs/heads/narrowed_eyes.webp",
           },
         ],
       },
@@ -193,17 +198,42 @@ export const CATALOG = {
             tag: "long hair",
             thumb: "thumbs/heads/hair_long.webp",
           },
+
+          {
+            id: "bob_cut",
+            tag: "bob cut",
+            thumb: "thumbs/heads/hair_bob_cut.webp",
+          },
+          {
+            id: "hair_bun",
+            tag: "hair bun",
+            thumb: "thumbs/heads/hair_bun.webp",
+          },
+
           {
             id: "twin_tails",
             tag: "twin tails",
             thumb: "thumbs/heads/hair_twintails.webp",
           },
           {
+            id: "pigtails",
+            tag: "pigtails",
+            thumb: "thumbs/heads/hair_pigtails.webp",
+          },
+
+          {
             id: "ponytail",
             tag: "ponytail",
             thumb: "thumbs/heads/hair_ponytail.webp",
           },
+          {
+            id: "side_ponytail",
+            tag: "side ponytail",
+            thumb: "thumbs/heads/hair_side_ponytail.webp",
+          },
+
           { id: "braid", tag: "braid", thumb: "thumbs/heads/hair_braid.webp" },
+
           {
             id: "messy_hair",
             tag: "messy hair",
@@ -221,6 +251,7 @@ export const CATALOG = {
         title: "hair — bangs",
         items: [
           { id: "bangs", tag: "bangs", thumb: "thumbs/heads/bangs.webp" },
+
           {
             id: "blunt_bangs",
             tag: "blunt bangs",
@@ -241,6 +272,17 @@ export const CATALOG = {
             tag: "curtain bangs",
             thumb: "thumbs/heads/bangs_curtain.webp",
           },
+
+          {
+            id: "asymmetrical_bangs",
+            tag: "asymmetrical bangs",
+            thumb: "thumbs/heads/bangs_asymmetrical.webp",
+          },
+          {
+            id: "hair_between_eyes",
+            tag: "hair between eyes",
+            thumb: "thumbs/heads/hair_between_eyes.webp",
+          },
         ],
       },
       {
@@ -252,6 +294,18 @@ export const CATALOG = {
             tag: "glasses",
             thumb: "thumbs/heads/acc_glasses.webp",
           },
+          {
+            id: "sunglasses",
+            tag: "sunglasses",
+            thumb: "thumbs/heads/acc_sunglasses.webp",
+          },
+
+          {
+            id: "earrings",
+            tag: "earrings",
+            thumb: "thumbs/heads/acc_earrings.webp",
+          },
+
           {
             id: "hairclip",
             tag: "hairclip",
@@ -267,12 +321,24 @@ export const CATALOG = {
             tag: "ribbon",
             thumb: "thumbs/heads/acc_ribbon.webp",
           },
+
           {
             id: "headphones",
             tag: "headphones",
             thumb: "thumbs/heads/acc_headphones.webp",
           },
+
           { id: "hat", tag: "hat", thumb: "thumbs/heads/acc_hat.webp" },
+          { id: "cap", tag: "cap", thumb: "thumbs/heads/acc_cap.webp" },
+          {
+            id: "beanie",
+            tag: "beanie",
+            thumb: "thumbs/heads/acc_beanie.webp",
+          },
+          { id: "beret", tag: "beret", thumb: "thumbs/heads/acc_beret.webp" },
+
+          { id: "hood", tag: "hood", thumb: "thumbs/heads/acc_hood.webp" },
+          { id: "mask", tag: "mask", thumb: "thumbs/heads/acc_mask.webp" },
         ],
       },
     ],
