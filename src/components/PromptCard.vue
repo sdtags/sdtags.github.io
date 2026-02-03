@@ -10,7 +10,6 @@
         @error="imgError = true"
       />
 
-      <!-- placeholder если картинки нет -->
       <div v-else class="card-img grid place-items-center bg-zinc-900/60">
         <div class="text-center px-3">
           <div class="text-xs text-zinc-300/80">no image</div>
@@ -19,8 +18,8 @@
 
       <div v-if="showLabels" class="tagbar">
         <transition name="tagfade" mode="out-in">
-          <span v-if="!copied" key="tag" class="tagpill">{{ item.tag }}</span>
-          <span v-else key="copied" class="tagpill">Copied to clipboard</span>
+          <span v-if="!flash" key="tag" class="tagpill">{{ item.tag }}</span>
+          <span v-else key="flash" class="tagpill">{{ flashText }}</span>
         </transition>
       </div>
     </div>
@@ -28,28 +27,31 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { computed, ref } from "vue";
 
 const props = defineProps({
   item: { type: Object, required: true },
   showLabels: { type: Boolean, default: true },
+  mode: { type: String, default: "copy" }, // "copy" | "build"
 });
 
-const emit = defineEmits(["copy"]);
+const emit = defineEmits(["pick"]);
 
-const copied = ref(false);
+const flash = ref(false);
 const imgError = ref(false);
 
 let timer = null;
 
-function handleClick() {
-  emit("copy", props.item.tag);
+const flashText = computed(() => (props.mode === "build" ? "Added" : "Copied"));
 
-  copied.value = true;
+function handleClick() {
+  emit("pick", props.item.tag);
+
+  flash.value = true;
   if (timer) clearTimeout(timer);
 
   timer = setTimeout(() => {
-    copied.value = false;
+    flash.value = false;
     timer = null;
   }, 850);
 }

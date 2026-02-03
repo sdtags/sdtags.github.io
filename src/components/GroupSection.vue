@@ -1,41 +1,55 @@
 <template>
   <section class="group">
     <div class="group-head" :class="open ? 'border-b border-white/10' : ''">
-      <div class="group-title">
-        <div class="min-w-0">
-          <h2>{{ title }}</h2>
+      <div class="group-head-grid">
+        <div class="group-left">
+          <span class="group-count">{{ items.length }}</span>
+        </div>
+
+        <div class="group-title">
+          <h2 :title="title">{{ title }}</h2>
+        </div>
+
+        <div class="group-right">
+          <button
+            class="chev"
+            @click="open = !open"
+            :title="open ? 'collapse' : 'expand'"
+          >
+            <svg
+              v-if="open"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M6 15l6-6 6 6"
+                stroke="rgba(255,255,255,.8)"
+                stroke-width="1.8"
+                stroke-linecap="round"
+              />
+            </svg>
+            <svg v-else width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M6 9l6 6 6-6"
+                stroke="rgba(255,255,255,.8)"
+                stroke-width="1.8"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
         </div>
       </div>
-
-      <button
-        class="chev"
-        @click="open = !open"
-        :title="open ? 'collapse' : 'expand'"
-      >
-        <svg v-if="open" width="18" height="18" viewBox="0 0 24 24" fill="none">
-          <path
-            d="M6 15l6-6 6 6"
-            stroke="rgba(255,255,255,.8)"
-            stroke-width="1.8"
-            stroke-linecap="round"
-          />
-        </svg>
-        <svg v-else width="18" height="18" viewBox="0 0 24 24" fill="none">
-          <path
-            d="M6 9l6 6 6-6"
-            stroke="rgba(255,255,255,.8)"
-            stroke-width="1.8"
-            stroke-linecap="round"
-          />
-        </svg>
-      </button>
     </div>
 
     <div v-if="open" class="gridwrap">
       <PromptGrid
         :items="items"
         :showLabels="showLabels"
-        @copy="$emit('copy', $event)"
+        :cardSize="cardSize"
+        :mode="mode"
+        @pick="$emit('pick', $event)"
       />
     </div>
   </section>
@@ -49,11 +63,13 @@ const props = defineProps({
   title: { type: String, required: true },
   items: { type: Array, default: () => [] },
   showLabels: { type: Boolean, default: true },
+  cardSize: { type: Number, default: 210 },
+  mode: { type: String, default: "copy" },
   forceOpen: { type: Boolean, default: false },
   forceClose: { type: Boolean, default: false },
 });
 
-defineEmits(["copy"]);
+defineEmits(["pick"]);
 
 const open = ref(true);
 
